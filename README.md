@@ -1,12 +1,13 @@
 # pywinauto_dastrader_symbol
-Double click on ISW scanner alers to change DAS montage symbol
-
-Idea: <br>
+Double click on ISW scanner alers to change DAS montage symbol.
 Lazy way to switch DAS montage symbol by selecting ISW scanner alert. 
 It would be nice to have a native integration between ISW and DAS like in Tradeideas but until then this script will win you a second or two. 
 
+Idea: <br>
+Change DAS symbol by clicking on ISW scanner alert.
+
 Problem:<br>
-Need to manually type/copy-paste alerts from the scanner into DAS
+This kind of integration is not natively supported. Need to manually type/copy-paste alerts from the scanner into DAS.
 
 Solution:<br>
 Simple python script that sends scanner ticker into clipboard and uses pywinauto to update montage.
