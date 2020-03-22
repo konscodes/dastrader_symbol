@@ -6,6 +6,7 @@ import time
 
 mouse = Controller()
 
+print('\nLocating application.. \n')
 app = Application(backend="win32").connect(class_name="AfxMDIFrame100").window(class_name="AfxMDIFrame100")
 
 #app.Montage327701.print_control_identifiers()
@@ -18,6 +19,8 @@ symbol = montage_level1.Edit
 CLICK_TIME = 0
 RELEASE_TIME = 0
 DIFFERENCE = 0
+
+print('\nWorking \n')
 
 def double_click(x, y, button, pressed):
     global RELEASE_TIME
