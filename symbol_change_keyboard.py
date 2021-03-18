@@ -17,7 +17,7 @@ def main_function(scriptkey):
         print("DAS!")
     else:
         start_time = time.time()
-        time.sleep(0.2)
+        time.sleep(0.3)
         keyboard.send("ctrl+c")
         time.sleep(0.01)
         print(pyperclip.paste())

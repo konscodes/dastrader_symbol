@@ -1,5 +1,4 @@
 from pynput.mouse import Listener, Button, Controller
-import pyautogui as pya
 import time
 import pygetwindow as gw
 import keyboard
