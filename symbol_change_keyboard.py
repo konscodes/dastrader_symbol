@@ -52,5 +52,4 @@ keyboard.add_hotkey('F5', scriptkey5)
 keyboard.wait()
 
 # TODO 
-# Reduce copipaste somehow
-# Hotkey to only be active with ISW windows
+# Reduce copipaste in the code somehow
