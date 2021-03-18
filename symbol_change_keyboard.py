@@ -13,9 +13,8 @@ print('\nWorking \n')
 # Main function
 def main_function(scriptkey):
     active_window = gw.getActiveWindow().title
-    if "DASTrader" in active_window:
-        print("DAS!")
-    else:
+    title_match_list = ["Intensity", "Ultra", "lounge", "Monitor", "Scan", "Chat", "CHAT"]
+    if any(title in active_window for title in title_match_list):
         start_time = time.time()
         time.sleep(0.3)
         keyboard.send("ctrl+c")
@@ -25,6 +24,8 @@ def main_function(scriptkey):
         keyboard.send(scriptkey)
         keyboard.send("ctrl+v+enter")
         print("--- %s seconds ---" % (time.time() - start_time))
+    else:
+        print("I3 not active!")
 
 # Pass DAS script hotkey into main function
 def scriptkey1():
