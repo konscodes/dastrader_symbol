@@ -50,6 +50,3 @@ keyboard.add_hotkey('F3', scriptkey3)
 keyboard.add_hotkey('F4', scriptkey4)
 keyboard.add_hotkey('F5', scriptkey5)
 keyboard.wait()
-
-# TODO 
-# Reduce copipaste in the code somehow
