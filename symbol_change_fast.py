@@ -33,7 +33,6 @@ def double_click(x, y, button, pressed):
     
     return CLICK_TIME, RELEASE_TIME
 
-
 # Main function
 def main_function():
     active_window = gw.getActiveWindow().title
