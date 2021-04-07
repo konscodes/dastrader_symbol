@@ -13,10 +13,10 @@ print('\nWorking \n')
 # Main function
 def main_function(scriptkey):
     active_window = gw.getActiveWindow().title
-    title_match_list = ["Intensity", "Ultra", "lounge", "Monitor", "Scan", "Chat", "CHAT"]
+    title_match_list = ["Intensity", "Ultra", "Monitor", "Scan"]
     if any(title in active_window for title in title_match_list):
         start_time = time.time()
-        time.sleep(0.3)
+        time.sleep(0.1)
         keyboard.send("ctrl+c")
         time.sleep(0.01)
         print(pyperclip.paste())
@@ -44,11 +44,11 @@ def scriptkey5():
     main_function("F5")
 
 # Assign Python hotkeys to DAS script hotkeys
-keyboard.add_hotkey('F1', scriptkey1)
-keyboard.add_hotkey('F2', scriptkey2)
-keyboard.add_hotkey('F3', scriptkey3)
-keyboard.add_hotkey('F4', scriptkey4)
-keyboard.add_hotkey('F5', scriptkey5)
+keyboard.add_hotkey('a', scriptkey1)
+keyboard.add_hotkey('s', scriptkey2)
+keyboard.add_hotkey('d', scriptkey3)
+keyboard.add_hotkey('z', scriptkey4)
+keyboard.add_hotkey('x', scriptkey5)
 keyboard.wait()
 
 # TODO 
