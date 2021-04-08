@@ -32,9 +32,9 @@ def main_function(dashotkey):
     title_match_list = ["Intensity", "Ultra", "lounge", "Monitor", "Scan", "Chat", "CHAT"]
     if any(title in active_window for title in title_match_list):
         start_time = time.time()
-        #time.sleep(0.1)
+        time.sleep(0.1)
         copy()
-        #time.sleep(0.01)
+        time.sleep(0.01)
         print(pyperclip.paste())
         das.activate()
         press_key(dashotkey)
