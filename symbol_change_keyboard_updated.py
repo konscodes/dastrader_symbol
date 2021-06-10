@@ -4,7 +4,7 @@ import time
 import pygetwindow as gw
 
 # Locating DAS window
-#print(gw.getAllTitles())
+print(gw.getAllTitles())
 #print(gw.getWindowsWithTitle('DASTrader'))
 das = gw.getWindowsWithTitle('DASTrader')[0]
 print('\nWorking \n')
@@ -29,7 +29,7 @@ def press_key(dashotkey):
 
 def main_function(dashotkey):
     active_window = gw.getActiveWindow().title
-    title_match_list = ["Intensity", "Ultra", "lounge", "Monitor", "Scan", "Chat", "CHAT"]
+    title_match_list = ["Intensity", "Ultra", "lounge", "Monitor", "Scan", "Chat", "CHAT", "%"]
     if any(title in active_window for title in title_match_list):
         start_time = time.time()
         time.sleep(0.1)
