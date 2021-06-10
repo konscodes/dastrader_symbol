@@ -4,7 +4,7 @@ import time
 import pygetwindow as gw
 
 # Locating DAS window
-print(gw.getAllTitles())
+#print(gw.getAllTitles())
 #print(gw.getWindowsWithTitle('DASTrader'))
 das = gw.getWindowsWithTitle('DASTrader')[0]
 print('\nWorking \n')
