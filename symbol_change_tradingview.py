@@ -48,7 +48,6 @@ def main_function(dashotkey):
         time.sleep(0.1)
         for character in symbol:
             keyboard.type(character)
-            #delay = random.uniform(0, 2)
             time.sleep(0.05)
         press_key(Key.enter)
         print('--- %s seconds ---' % (time.time() - start_time))
