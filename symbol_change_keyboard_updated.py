@@ -1,3 +1,4 @@
+from pywinauto_dastrader_symbol.symbol_change_tradingview import exit_function
 from pynput.keyboard import Key, Controller, GlobalHotKeys
 import pyperclip
 import time
@@ -7,7 +8,7 @@ import pygetwindow as gw
 #print(gw.getAllTitles())
 #print(gw.getWindowsWithTitle('DASTrader'))
 das = gw.getWindowsWithTitle('DASTrader')[0]
-print('\nWorking \n')
+print('\nWorking \nPress F12 to exit')
 
 keyboard = Controller()
 
@@ -60,12 +61,16 @@ def transfer_function4():
 def transfer_function5():
     main_function(DASHOTKEY5)
 
+def exit_function():
+    exit()
+
 # Assign Python hotkeys to DAS script hotkeys
 HOTKEY1 = "<F1>"
 HOTKEY2 = "<F2>"
 HOTKEY3 = "<F3>"
 HOTKEY4 = "<F4>"
 HOTKEY5 = "<F5>"
+HOTKEY6 = '<F12>'
 
 DASHOTKEY1 = Key.f1
 DASHOTKEY2 = Key.f2
@@ -78,7 +83,8 @@ with GlobalHotKeys({
         HOTKEY2 : transfer_function2,
         HOTKEY3 : transfer_function3,
         HOTKEY4 : transfer_function4,
-        HOTKEY5 : transfer_function5}) as MappedResult:
+        HOTKEY5 : transfer_function5,
+        HOTKEY6 : exit_function}) as MappedResult:
     MappedResult.join()
 
 # TODO 
