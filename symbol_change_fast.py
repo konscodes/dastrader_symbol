@@ -11,27 +11,27 @@ das = gw.getWindowsWithTitle("DASTrader")[0]
 mouse = Controller()
 
 # Global variables for detecting double_click
-CLICK_TIME = 0
-RELEASE_TIME = 0
-DIFFERENCE = 0
+click_time = 0
+release_time = 0
+difference = 0
 print("\nWorking \n")
 
 # Double click function
 def double_click(x, y, button, pressed):
-    global RELEASE_TIME
-    global CLICK_TIME
-    global DIFFERENCE
+    global release_time
+    global click_time
+    global difference
 
     if pressed and button == Button.left:
-        CLICK_TIME = time.time()
-        DIFFERENCE = CLICK_TIME - RELEASE_TIME
-        if DIFFERENCE < 0.25:
+        click_time = time.time()
+        difference = click_time - release_time
+        if difference < 0.25:
             #print("Double click!")
             main_function()
     else:
-        RELEASE_TIME = time.time()
+        release_time = time.time()
     
-    return CLICK_TIME, RELEASE_TIME
+    return click_time, release_time
 
 # Main function
 def main_function():

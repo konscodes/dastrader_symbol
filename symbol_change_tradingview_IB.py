@@ -1,7 +1,6 @@
 from pynput.keyboard import Key, Controller, GlobalHotKeys
 import pyperclip
 import time
-import random
 import pygetwindow as gw
 
 # Locating DAS window
