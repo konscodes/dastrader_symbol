@@ -1,4 +1,3 @@
-from pywinauto_dastrader_symbol.symbol_change_tradingview import exit_function
 from pynput.keyboard import Key, Controller, GlobalHotKeys
 import pyperclip
 import time
