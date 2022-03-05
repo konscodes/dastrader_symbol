@@ -60,22 +60,53 @@ def transfer_function4():
 def transfer_function5():
     main_function(DASHOTKEY5)
 
+def transfer_function6():
+    main_function(DASHOTKEY6)
+
+def transfer_function7():
+    main_function(DASHOTKEY7)
+
+def transfer_function8():
+    main_function(DASHOTKEY8)
+
+def transfer_function9():
+    main_function(DASHOTKEY9)
+
+def transfer_function10():
+    main_function(DASHOTKEY10)
+
+def transfer_function11():
+    main_function(DASHOTKEY11)
+
 def exit_function():
     exit()
 
 # Assign Python hotkeys to DAS script hotkeys
-HOTKEY1 = "<F1>"
-HOTKEY2 = "<F2>"
-HOTKEY3 = "<F3>"
-HOTKEY4 = "<F4>"
-HOTKEY5 = "<F5>"
-HOTKEY6 = '<F12>'
+HOTKEY1 = '<F1>'
+HOTKEY2 = '<F2>'
+HOTKEY3 = '<F3>'
+HOTKEY4 = '<F4>'
+HOTKEY5 = '<F5>'
+HOTKEY6 = '<F6>'
+HOTKEY7 = '<F7>'
+HOTKEY8 = '<F8>'
+HOTKEY9 = '<F9>'
+HOTKEY10 = '<F10>'
+HOTKEY11 = '<F11>'
+HOTKEY12 = '<F12>'
 
 DASHOTKEY1 = Key.f1
 DASHOTKEY2 = Key.f2
 DASHOTKEY3 = Key.f3
 DASHOTKEY4 = Key.f4
 DASHOTKEY5 = Key.f5
+DASHOTKEY6 = Key.f6
+DASHOTKEY7 = Key.f7
+DASHOTKEY8 = Key.f8
+DASHOTKEY9 = Key.f9
+DASHOTKEY10 = Key.f10
+DASHOTKEY11 = Key.f11
+DASHOTKEY12 = Key.f12
 
 with GlobalHotKeys({
         HOTKEY1 : transfer_function1,
@@ -83,7 +114,13 @@ with GlobalHotKeys({
         HOTKEY3 : transfer_function3,
         HOTKEY4 : transfer_function4,
         HOTKEY5 : transfer_function5,
-        HOTKEY6 : exit_function}) as MappedResult:
+        HOTKEY6 : transfer_function6,
+        HOTKEY7 : transfer_function7,
+        HOTKEY8 : transfer_function8,
+        HOTKEY9 : transfer_function9,
+        HOTKEY10 : transfer_function10,
+        HOTKEY11 : transfer_function11,
+        HOTKEY12 : exit_function}) as MappedResult:
     MappedResult.join()
 
 # TODO 
