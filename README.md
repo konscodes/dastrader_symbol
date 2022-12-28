@@ -1,45 +1,37 @@
-# pywinauto_dastrader_symbol
+# DasTrader Symbol 
 Double click on ISW scanner alers to change DAS montage symbol.
 Lazy way to switch DAS montage symbol by selecting ISW scanner alert. 
 It would be nice to have a native integration between ISW and DAS like in Tradeideas but until then this script will win you a second or two. 
 
-Idea: <br>
-Change DAS symbol by clicking on ISW scanner alert.
+## What
+Script to change DAS montage symbol when clicking on ISW scanner alert.
+Simple python script that sends scanner ticker into clipboard and pastes into active DAS montage.
 
-Problem:<br>
+## Why
 This kind of integration is not natively supported. Need to manually type/copy-paste alerts from the scanner into DAS.
 
-Solution:<br>
-Simple python script that sends scanner ticker into clipboard and uses pywinauto to update montage.
+## How to use
+1. Set the DAS hotkeys to activate the correct montage
+![image](https://user-images.githubusercontent.com/6221944/209818665-bf9aa826-8ef3-4f64-8175-a2f436b9e5cf.png)
+![image](https://user-images.githubusercontent.com/6221944/209818804-2ea13a8e-0590-4483-8e1c-e87a3fb608e0.png)
 
-Notes:
+2. Make sure that DAS is running
+3. Download symbol_change_keyboard script and install all the requirements above
+4. Run the script (open cmd in the directory with script; enter: python script_name.py)
+5. Double click on scanner alert to select it and press the hotkey
+6. Correct symbol should be set in montage automatically
+
+### Notes
 - script will overwrite existing clipboard
-- can be set to go with mouse button click or keyboard hotkey
-- mose script is set for right mouse double click by default
-- keyboard script is set to F8 by default
+- keyboard script is set to quit on F12 by default
 
-Requirements:<br>
-Pythin 3.8.0<br>
-Pywinauto 0.6.8<br>
-Pynput 1.6.7<br>
-keyboard, pyperclip, time libraries<br>
+### Requirements
+- python 3.8.0+
+- pygetwindow 0.0.9
+- keyboard, time libraries
 
-Preparation:
-- Download working_symbol_change_mouse script and install all the requirements above
-- Run the script (open cmd in the directory with script; enter: py script_name.py)
-
-How to use:
-1. Make sure that DAS is running
-2. Double click right mouse button on the alerted ticker
-3. Profit ;) the correct symbol should be set in montage
-
-
-Change log:<br>
-v0.4
-Added mouse double click script
-
-v0.3
-Added hotkey module to run the script
-
-v0.2
-Basic functionality reached
+### Change log
+- Removed unnecessary scripts and libraries
+- Added mouse double click script
+- Added hotkey module to run the script
+- Basic functionality reached
